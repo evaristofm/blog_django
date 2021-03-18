@@ -12,23 +12,25 @@
             dy=".3em">32x32</text>
     </svg>
 
-    <p class="border-bottom pb-2 mb-0">
+    <div class="border-bottom pb-2 mb-0">
         <strong class="d-block text-gray-dark">
             <font style="vertical-align: inherit;">
-                <font style="vertical-align: inherit;">{{ post.author }}</font> <br>
-                <font style="vertical-align: inherit;">{{ post.title }} </font>
+                <font style="vertical-align: inherit;">{{ post.title }} </font> <br>
+                <font style="vertical-align: inherit;">{{ post.author }}</font> 
+                <p style="text-align: right;">
+                    {{ post.date_posted|date:"d F, Y"}}
+                </p>
             </font>
         </strong>
+            
         <font style="vertical-align: inherit;">
-            <font style="vertical-align: inherit;">{{post.content}} Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Eos, minima. Magnam, nulla repellendus labore expedita recusandae perferendis
-                deserunt impedit delectus quaerat sed atque officiis nesciunt iure doloribus consectetur commodi
-                nostrum?</font>
+            <font style="vertical-align: inherit;">{{post.content}}</font>
+            
 
         </font>
-        </font>
-    </p>
-    <p>{{ post.date_posted}}</p>
+        </font>   
+        
+    </div>
 </div>
 
 {% endfor %}
