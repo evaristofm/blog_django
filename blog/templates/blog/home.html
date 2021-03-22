@@ -2,18 +2,13 @@
 {% block title %} Blog {% endblock%}
 
 {% block content %}
+
 {% for post in posts %}
 
 <main class="container">
 
     <div class="my-3 p-3 bg-body rounded shadow-sm">
-        <h6 class="border-bottom pb-2 mb-0">
-            <font style="vertical-align: inherit;">
-                <font style="vertical-align: inherit;">Postagens recentes</font>
-            </font>
-        </h6>
-
-
+        
         <div class="d-flex text-muted pt-3">
             <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32"
                 xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Marcador de posição: 32x32"
@@ -43,13 +38,6 @@
 
             </div>
         </div>
-        <small class="d-block text-end mt-3">
-            <a href="#">
-                <font style="vertical-align: inherit;">
-                    <font style="vertical-align: inherit;">Todas as atualizações</font>
-                </font>
-            </a>
-        </small>
     </div>
 
 
