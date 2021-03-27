@@ -15,8 +15,10 @@
             <div class="border-bottom pb-2 mb-0">
                 <strong class="d-block text-gray-dark">
                     <font style="vertical-align: inherit;">
-                        <font style="vertical-align: inherit;">{{ post.title }} </font> <br>
-                        <font style="vertical-align: inherit;">{{ post.author }}</font>
+                       <a href="{% url 'post-detail' post.id %}">
+                            <font style="vertical-align: inherit;">{{ post.title }} </font> <br>
+                        </a>
+                            <font style="vertical-align: inherit;">{{ post.author }}</font>
                         <p style="text-align: right;">
                             {{ post.date_posted|date:"d F, Y"}}
                         </p>
