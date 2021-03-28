@@ -2,6 +2,7 @@
 {% block title %} Blog {% endblock%}
 
 {% block content %}
+    <h1 class="mb-3" >Total de posts de {{ view.kwargs.username }} ({{ page_obj.paginator.count }})</h1>
 
 {% for post in posts %}
 
@@ -14,17 +15,15 @@
           
             <div class="border-bottom pb-2 mb-0">
                 <strong class="d-block text-gray-dark">
-                    
+                    <font style="vertical-align: inherit;">
                        <a href="{% url 'post-detail' post.id %}">
-                            {{ post.title }}<br>
+                            <font style="vertical-align: inherit;">{{ post.title }} </font> <br>
                         </a>
-                        <a href="{% url 'user-posts' post.author.username %}">
-                           {{ post.author }}
-                        </a>
+                            <font style="vertical-align: inherit;">{{ post.author }}</font>
                         <p style="text-align: right;">
                             {{ post.date_posted|date:"d F, Y"}}
                         </p>
-                    
+                    </font>
                 </strong>
 
                 <font style="vertical-align: inherit;">

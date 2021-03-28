@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %} Detail {% endblock%}
+
+{% block content %}
+
+
+<main class="container">
+
+    <div class="my-3 p-3 bg-body rounded shadow-sm">
+        
+        <div class="d-flex text-muted pt-3">
+            <div class="border-bottom pb-2 mb-0">
+                <strong class="d-block text-gray-dark">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">{{ object.title }} </font> <br>
+                        <font style="vertical-align: inherit;">{{ object.author }}</font>
+                        <p style="text-align: right;">
+                            {{ object.date_posted|date:"d F, Y"}}
+                        </p>
+                        {% if object.author == user %}
+                            <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'post-update' object.id %}">Update</a>
+                            <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'post-delete' object.id %}">Delete</a>
+
+                            {% endif %}
+                    </font>
+                </strong>
+
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">{{object.content}}</font>
+                </font>
+                </font>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+{% endblock%}
