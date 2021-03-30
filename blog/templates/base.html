@@ -11,6 +11,27 @@
     integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
   <link rel="stylesheet" href="{% static 'blog/main.css' %}">
+  <style>
+    body {
+      background-color: darkgray;
+    }
+    .form-login {
+      background-color: white;
+      max-width: 500px;
+      width: 70%;
+      padding: 20px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      
+      
+  }
+  #buttonL {
+    margin-top: 10px;
+    
+  }
+  </style>
 </head>
 
 <body>
@@ -27,14 +48,11 @@
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="/blog">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'blog_about' %}">About</a>
-            </li>
           </ul>
           <div class="navbar-nav">
             {% if user.is_authenticated %}
-            <a class="nav-item nav-link" href="{% url 'post-create' %}">Novo Post</a>
-            <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a>
+            <a class="nav-item nav-link" href="{% url 'post-create' %}">Nova Postagem</a>
+            <a class="nav-item nav-link" href="{% url 'profile' %}">Perfil</a>
             <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
 
             {% else %}

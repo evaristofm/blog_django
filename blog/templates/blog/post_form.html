@@ -1,18 +1,17 @@
 {% extends "base.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
-<div style="border: 500px;">
-    <div class="" >
+    <div class="form-login" >
         <form action="" method="POST">
             {% csrf_token %}
             <fieldset class="form-group">
-                <legend class="border-bottom mb-4">Blog Post</legend>
+                <legend class="border-bottom mb-4">Blog Postagem</legend>
                 {{ form|crispy }}
             </fieldset>
             <div class="form-group">
-                <button class="btn btn-outline-info" type="submit">Post</button>
+                <button style="margin-top: 10px;" class="btn btn-outline-info" type="submit">Enviar</button>
             </div>
         </form>
     </div>
-</div>
+
 {% endblock %}
